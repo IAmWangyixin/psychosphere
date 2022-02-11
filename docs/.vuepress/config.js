@@ -39,5 +39,6 @@ module.exports = {
         ]
       }]
     }
-  }
+  },
+  base: '/psychosphere/',
 }
