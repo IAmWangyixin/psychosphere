@@ -1,6 +1,6 @@
 module.exports = {
-  title: '小天宇',
-  description: '小天宇的技术成长记录',
+  title: '竹子',
+  description: '竹子的博客',
   theme: 'reco',
   themeConfig: {
     subSidebar: 'auto',
