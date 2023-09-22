@@ -4,13 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.7"
+    "vuepress": "1.9.7",
+    "vuepress-theme-reco": "1.6.17"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "dependencies": {
-    "vuepress-theme-reco": "^1.6.10"
+  "resolutions": {
+    "@vue/babel-preset-app": "4.5.18"
   }
 }

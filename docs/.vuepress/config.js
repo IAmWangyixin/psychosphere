@@ -27,15 +27,15 @@ module.exports = {
         ]
       }],
       '/front-end/': [{
-        title: '前端知识',
-        path: '/front-end/javascript',
+        title: 'Javascript',
+        path: '/front-end/js/javascript',
         collapsable: false,
         children: [
           {
             title: 'JavaScript',
-            path: '/front-end/javascript',
+            path: '/front-end/js/javascript',
           },
-          { title: 'Promise', path: '/front-end/promise' }
+          { title: 'Promise', path: '/front-end/js/promise' }
         ]
       }]
     }
