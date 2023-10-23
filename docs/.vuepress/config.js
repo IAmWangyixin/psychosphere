@@ -7,8 +7,6 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: 'Lexical', link: '/lexical/' },
-      { text: '前端', link: '/front-end/' },
-      { text: '导航', link: '/guide/' },
       { text: 'Github', link: 'https://github.com/ninawangyimei' },
       {
         text: '了解更多',
@@ -19,14 +17,6 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/guide/': [
-        {
-          title: '前端导航',
-          link: '/guide/',
-          collapsable: false,
-          children: [{ title: '导航', path: '/guide/' }],
-        },
-      ],
       '/lexical/': [
         {
           title: 'Lexical 中文文档',
@@ -43,35 +33,21 @@ module.exports = {
               children: [
                 {
                   title: '入门',
-                  path: '/lexical/docs/gettingStarted/gettingStartedWithReact.md',
+                  path: '/lexical/docs/gettingStarted/gettingStartedWithReact',
                 },
                 {
                   title: '概念',
-                  path: '/lexical/docs/concepts/node.md',
+                  path: '/lexical/docs/concepts/node',
                   collapsable: true,
                   children: [
                     {
                       title: '节点',
-                      path: '/lexical/docs/concepts/node.md',
+                      path: '/lexical/docs/concepts/node',
                     },
                   ],
                 },
               ],
             },
-          ],
-        },
-      ],
-      '/front-end/': [
-        {
-          title: 'Javascript',
-          path: '/front-end/js/javascript',
-          collapsable: false,
-          children: [
-            {
-              title: 'JavaScript',
-              path: '/front-end/js/javascript',
-            },
-            { title: 'Promise', path: '/front-end/js/promise' },
           ],
         },
       ],

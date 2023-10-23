@@ -16,24 +16,6 @@ Lexical 是一个可扩展的 JavaScript 网页文本编辑器框架，重点是
 - [纯文本沙箱](https://codesandbox.io/s/lexical-plain-text-example-g932e)
 - [富文本沙箱](https://codesandbox.io/s/lexical-rich-text-example-5tncvy?file=/src/Editor.js)
 
-## Daily To Do
-
-- [x] lexical 介绍翻译
-- [x] 富文本编辑
-
-## Weekly To Do
-
-- [ ] 唤起菜单，菜单编辑
-- [ ] 插入功能，插入图片
-- [ ] 更新现有内容（选中的文本使用其他内容替换）selection.insetText()
-- [ ] 拖拽
-- [ ] 文档保存？
-- [ ] 多人协作，移动端
-
-## next week to do
-
-- [ ] quill 文档 and demo
-
 ## 概览
 
 - 使用 react 创建实例
