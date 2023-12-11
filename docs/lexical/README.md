@@ -1,6 +1,6 @@
 ---
 title: Lexical 中文文档
-author: 竹子
+author: 山雨竹韵
 date: '2023-10-08'
 ---
 

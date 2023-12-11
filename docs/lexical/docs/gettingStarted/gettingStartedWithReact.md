@@ -1,6 +1,6 @@
 ---
 title: 使用React入门
-author: 竹子
+author: 山雨竹韵
 date: '2023-10-11'
 ---
 

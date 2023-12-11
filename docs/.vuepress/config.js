@@ -1,6 +1,6 @@
 module.exports = {
-  title: '竹子',
-  description: '竹子的博客',
+  title: '山雨竹韵',
+  description: '山雨竹韵的博客',
   theme: 'reco',
   themeConfig: {
     subSidebar: 'auto',
@@ -43,6 +43,14 @@ module.exports = {
                     {
                       title: '节点',
                       path: '/lexical/docs/concepts/node',
+                    },
+                    {
+                      title: '节点覆盖',
+                      path: '/lexical/docs/concepts/nodeOverrides',
+                    },
+                    {
+                      title: '监听器',
+                      path: '/lexical/docs/concepts/listeners',
                     },
                   ],
                 },
