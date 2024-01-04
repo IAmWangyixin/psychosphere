@@ -53,7 +53,7 @@ EditorState 中只有一个 RootNode，它始终位于顶部，代表可编辑�
 
 Lexical 节点可以具有属性。 重要的是，这些属性也是 JSON 可序列化的，因此您永远不应该将属性分配给作为函数、Symbol、Map、Set 或具有与内置函数不同原型的任何其他对象的节点。`null`、`undefined`、`number`、`string`、`boolean`、`{}` 和 `[]` 都是可以分配给节点的属性类型。
 
-按照惯例，我们在属性前加上 ** （双下划线），以便清楚地表明这些属性是私有的，并且应避免直接访问它们。 我们选择 ** 而不是 _，因为某些构建工具会破坏并缩小单个 _ 前缀属性以提高代码大小。 但是，如果您要在构建之外公开要扩展的节点，这种情况就会失败。
+按照惯例，我们在属性前加上 `__` （双下划线），以便清楚地表明这些属性是私有的，并且应避免直接访问它们。 我们选择 `__` 而不是 `_`，因为某些构建工具会破坏并缩小单个 `_` 前缀属性以提高代码大小。 但是，如果您要在构建之外公开要扩展的节点，这种情况就会失败。
 
 如果您要添加一个您希望可修改或可访问的属性，那么您应该始终在节点上为此属性创建一组 `get*()` 和 `set*()` 方法。 在这些方法中，您需要调用一些非常重要的方法，以确保与 Lexical 内部不可变系统的一致性。 这些方法是 `getWritable()` 和 `getLatest()`。
 
@@ -69,9 +69,7 @@ class MyCustomNode extends SomeOtherNode {
   }
 
   setFoo(foo: string) {
-    // getWritable() creates a clone of the node
-    // if needed, to ensure we don't try and mutate
-    // a stale version of this node.
+    // 如果需要，getWritable() 会创建节点的克隆，以确保我们不会尝试改变此节点的陈旧版本。
     const self = this.getWritable();
     self.__foo = foo;
   }
@@ -85,7 +83,7 @@ class MyCustomNode extends SomeOtherNode {
 }
 ```
 
-最后，所有节点都应该有一个静态 `getType()` 方法和一个静态 `clone()` 方法。 Lexical 使用该类型能够在反序列化期间用其关联的类原型重建节点（对于复制 + 粘贴很重要！）。 Lexical 使用克隆来确保新 `EditorState` 快照创建之间的一致性。
+最后，所有节点都应该有一个静态 `getType()` 方法和一个静态 `clone()` 方法。 Lexical 使用该类型能够在反序列化期间用其关联的类原型重建节点（对于复制 + 粘贴很重要！）。Lexical 使用克隆来确保新 `EditorState` 快照创建之间的一致性。
 
 使用这些方法扩展上面的示例：
 
