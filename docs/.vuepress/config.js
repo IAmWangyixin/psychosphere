@@ -52,6 +52,14 @@ module.exports = {
                       title: '监听器',
                       path: '/lexical/docs/concepts/listeners',
                     },
+                    {
+                      title: '选择器',
+                      path: '/lexical/docs/concepts/selection',
+                    },
+                    {
+                      title: '读取模式/写模式',
+                      path: '/lexical/docs/concepts/readeditmode',
+                    },
                   ],
                 },
               ],
