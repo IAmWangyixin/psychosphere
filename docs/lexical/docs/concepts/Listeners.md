@@ -12,16 +12,15 @@ date: '2023-12-11'
 
 ```js
 const removeUpdateListener = editor.registerUpdateListener(({editorState}) => {
-  // The latest EditorState can be found as `editorState`.
-  // To read the contents of the EditorState, use the following API:
+  // 最新的 EditorState 可以通过 `editorState` 找到.
+  // 读取内容对应的 EditorState, 可以使用如下API:
 
   editorState.read(() => {
-    // Just like editor.update(), .read() expects a closure where you can use
-    // the $ prefixed helper functions.
+    // 就像 editor.update() 一样, .read() 需要一个闭包，你可以在闭包中使用 $ 前缀的帮助函数.
   });
 });
 
-// Do not forget to unregister the listener when no longer needed!
+// 当你不再需要的时候别忘了注销监听器！
 removeUpdateListener();
 ```
 
@@ -31,14 +30,15 @@ removeUpdateListener();
 - `tags` 传递给更新的所有标签的集合
 
 需要注意的一件事是“瀑布式”更新。 您可以在此处安排更新侦听器内的更新，如下所示：
+
 ```js
 editor.registerUpdateListener(({editorState}) => {
-  // Read the editorState and maybe get some value.
+  // 读取编辑器状态并获取需要的值。
   editorState.read(() => {
     // ...
   });
 
-  // Then schedule another update.
+  // 然后安排另一次更新。
   editor.update(() => {
     // ...
   });
@@ -54,12 +54,12 @@ editor.registerUpdateListener(({editorState}) => {
 ```js
 const removeTextContentListener = editor.registerTextContentListener(
   (textContent) => {
-    // The latest text content of the editor!
+    // 编辑器最新的文本内容!
     console.log(textContent);
   },
 );
 
-// Do not forget to unregister the listener when no longer needed!
+// 当你不再需要的时候别忘了注销监听器！
 removeTextContentListener();
 ```
 
@@ -76,14 +76,14 @@ removeTextContentListener();
 const removeMutationListener = editor.registerMutationListener(
   MyCustomNode,
   (mutatedNodes) => {
-    // mutatedNodes is a Map where each key is the NodeKey, and the value is the state of mutation.
+    // 突变节点是一个Map, 其中每个键都是NodeKey, 键值是突变状态。 
     for (let [nodeKey, mutation] of mutatedNodes) {
       console.log(nodeKey, mutation)
     }
   },
 );
 
-// Do not forget to unregister the listener when no longer needed!
+// 当你不再需要的时候别忘了注销监听器！
 removeMutationListener();
 ```
 
@@ -93,12 +93,12 @@ removeMutationListener();
 ```js
 const removeEditableListener = editor.registerEditableListener(
   (editable) => {
-    // The editor's mode is passed in!
+    // 编辑器模式已传入！
     console.log(editable);
   },
 );
 
-// Do not forget to unregister the listener when no longer needed!
+// 当你不再需要的时候别忘了注销监听器！
 removeEditableListener();
 ```
 
@@ -109,12 +109,12 @@ removeEditableListener();
 ```js
 const removeDecoratorListener = editor.registerDecoratorListener(
   (decorators) => {
-    // The editor's decorators object is passed in!
+    // 编辑器装饰器对象已传入！
     console.log(decorators);
   },
 );
 
-// Do not forget to unregister the listener when no longer needed!
+// 当你不再需要的时候别忘了注销监听器！
 removeDecoratorListener();
 ```
 
@@ -125,11 +125,11 @@ removeDecoratorListener();
 ```js
 const removeRootListener = editor.registerRootListener(
   (rootElement, prevRootElement) => {
-   //add listeners to the new root element
-   //remove listeners from the old root element
+   // 添加监听器到新的根元素
+   // 从旧的根元素移除监听器
   },
 );
 
-// Do not forget to unregister the listener when no longer needed!
+// 当你不再需要的时候别忘了注销监听器！
 removeRootListener();
 ```
