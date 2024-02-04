@@ -8,13 +8,13 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: 'Lexical', link: '/lexical/' },
       { text: 'Github', link: 'https://github.com/ninawangyimei' },
-      {
-        text: '了解更多',
-        items: [
-          { text: '掘金', link: '#' },
-          { text: '微信公众号', link: '#' },
-        ],
-      },
+      // {
+      //   text: '了解更多',
+      //   items: [
+      //     { text: '掘金', link: '#' },
+      //     { text: '微信公众号', link: '#' },
+      //   ],
+      // },
     ],
     sidebar: {
       '/lexical/': [
